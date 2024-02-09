@@ -209,9 +209,15 @@ h3 {
   }
   .info {
     width: 310px;
+    display: contents;
+    justify-content: center;
+    align-items: center;
   }
   .text {
     font-size: 35px;
     color: black;
+  }
+  h3 {
+    padding: 10px 10px 10px 10px;
   }
 }
