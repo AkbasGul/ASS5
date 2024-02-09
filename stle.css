@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(227, 202, 170);
+}
+.container {
+  max-width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 35px 90px 20px 90px;
+  grid-gap: 1rem;
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.text {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  text-shadow: 2px 3px 3px;
+  color: rgb(138, 41, 41);
+}
+
+.content {
+  border: 2px none black;
+  border-radius: 15px;
+  background-color: azure;
+  overflow: hidden;
+  width: 100%;
+}
+.content img {
+  width: 100%;
+  /* height: 100%; */
+  background-position: center;
+  background-size: cover;
+  /* overflow: hidden; */
+  height: 70%;
+}
+.content1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.content6 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  padding: 2rem;
+}
+
+.content:hover {
+  box-shadow: 1px 6px 6px 0 rgb(9, 9, 9);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 30px 30px 30px 30px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 600px 600px;
+    grid-template-areas:
+      "birinci ikinci"
+      "ucuncu dorduncu"
+      "besinci altinci";
+
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 30px 20px 30px 25px;
+    height: 100%; */
+  }
+  .content1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 400px;
+    height: 600px;
+    grid-area: birinci;
+  }
+
+  .info h3 {
+    padding: 18px 10px 10px 10px;
+  }
+  .content2 {
+    width: 400px;
+    height: 600px;
+    grid-area: ikinci;
+  }
+  .content3 {
+    width: 400px;
+    height: 600px;
+    grid-area: ucuncu;
+  }
+  .content4 {
+    width: 400px;
+    height: 600px;
+    grid-area: dorduncu;
+  }
+  .content5 {
+    width: 400px;
+    height: 600px;
+    grid-area: besinci;
+  }
+  .content6 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 400px;
+    height: 600px;
+    grid-area: altinci;
+  }
+  h1 {
+    margin: 25px;
+  }
+  .text {
+    font-size: 45px;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 500px 500px;
+    grid-template-areas:
+      "birinci ikinci"
+      "ucuncu dorduncu"
+      "besinci altinci";
+
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 30px 20px 30px 25px;
+    height: 100%; */
+  }
+  .content1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 250px;
+    height: 500px;
+    grid-area: birinci;
+  }
+
+  .info h3 {
+    padding: 18px 10px 10px 10px;
+  }
+  .content2 {
+    width: 250px;
+    height: 500px;
+    grid-area: ikinci;
+  }
+  .content3 {
+    width: 250px;
+    height: 500px;
+    grid-area: ucuncu;
+  }
+  .content4 {
+    width: 250px;
+    height: 500px;
+    grid-area: dorduncu;
+  }
+  .content5 {
+    width: 250px;
+    height: 500px;
+    grid-area: besinci;
+  }
+  .content6 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 250px;
+    height: 500px;
+    grid-area: altinci;
+  }
+  h1 {
+    margin: 25px;
+  }
+  .text {
+    font-size: 45px;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content * {
+    max-width: 270px;
+    max-height: 810px;
+  }
+  .info {
+    width: 310px;
+  }
+  .text {
+    font-size: 35px;
+    color: black;
+  }
+}
